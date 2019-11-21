@@ -5,43 +5,27 @@
  */
 package javasandbox;
 
-import javasandbox.Converters.RatesOfSpeed;
-import javasandbox.Die;
-
 /**
  *
  * @author CrispyElectron
  */
 public class JavaSandbox {
-    
-    public static void equalizeDice(Die d1, Die d2) {        
-        while(d1.getDieFace() != d2.getDieFace()) {
-            d1.roll();
-            d2.roll();
-        }
-    }
-    
-    public static Die[] generateDice(int numDice) {
-        Die[] dice = new Die[numDice];
+    public static void printReverse(String[] stringSet) {
+        int strings = stringSet.length;
         
-        for(int i = 0; i < numDice; i++) {
-            dice[i] = new Die();
+        for(int i = (strings - 1); i >= 0; i--) {
+            System.out.println(stringSet[i]);
         }
-
-        return dice;
     }
     
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Die[] dice = generateDice(5);
-       
-       equalizeDice(dice[0], dice[1]);
-       dice[0].printDieFace();
-       dice[1].printDieFace();
-       dice[2].printDieFace();
-       dice[3].printDieFace();
-       dice[4].printDieFace();       
+        String[] weekdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+        
+        printReverse(weekdays);
+        
+        System.out.println(weekdays[1].substring(weekdays[1].length() - 1, 0));
     }
 }
