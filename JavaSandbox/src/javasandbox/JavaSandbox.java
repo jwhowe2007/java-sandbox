@@ -24,8 +24,6 @@ public class JavaSandbox {
     public static void main(String[] args) {
         String[] weekdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
         
-        printReverse(weekdays);
-        
-        System.out.println(weekdays[1].substring(weekdays[1].length() - 1, 0));
+        printReverse(weekdays);        
     }
 }
